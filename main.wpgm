@@ -1,16 +1,20 @@
 import wollok.game.*
 
-import pepita.*
+import isaac.*
 
-program PepitaGame {
-	game.title("Pepita")
+program  isaacGame {
+	game.title("Isaac")
 	game.height(10)
-	game.width(10)
+	game.width(30)
 	game.cellSize(100)
 
-	game.addVisual(pepita)
+	game.addVisual(isaac)
 
-	keyboard.w().onPressDo({ pepita.fly(1) })
+
+	keyboard.up().onPressDo{isaac.moverse(isaac.position().up(1))}
+	keyboard.down().onPressDo{isaac.moverse(isaac.position().down(1))}
+	keyboard.left().onPressDo{isaac.moverse(isaac.position().left(1))}
+	keyboard.right().onPressDo{ isaac.moverse(isaac.position().right(1))}
 
 	game.start()
 }

@@ -1,12 +1,13 @@
-#  (reemplazar nombre de juego acá) 
+#  The binding of unArgentino
 
 UTN - Facultad Regional Buenos Aires - Materia Paradigmas de Programación
 
 ## Equipo de desarrollo: 
 
-- completar...
-- completar...
- 
+- Juan Jose Nogueira
+- Fabricio Lopes 
+- Lourdes
+
 
 ## Capturas 
 
@@ -14,9 +15,15 @@ UTN - Facultad Regional Buenos Aires - Materia Paradigmas de Programación
 
 ## Reglas de Juego / Instrucciones
 
-(completar...)
+Hacer daño a los enemigos disparando "lagrimas" para pasar el nivel
+Agarrar items especiales para modificar el ataque
+Esquivas las superficies con obstaculos que hagan daño
+Llegar hasta la proxima puerta para pasar de nivel 
+Una vez que supere todas las habitaciones gana el juego
+Tiene un nivel de vida basado en corazones, al vaciarse se vuelve al inicio
+
 
 ## Controles:
 
-- `W` para...
+- `Up` para...
 
