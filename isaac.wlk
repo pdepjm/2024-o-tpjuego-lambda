@@ -1,4 +1,5 @@
 import wollok.game.*
+import nivel.*
 
 object isaac{
 
@@ -9,4 +10,10 @@ object isaac{
   method moverse(nuevaPosicion){
      position = nuevaPosicion
   }
+}
+
+
+object lagrima{
+  method position() = isaac.position()
+
 }
