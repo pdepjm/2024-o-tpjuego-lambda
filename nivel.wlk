@@ -5,9 +5,9 @@ import visuales.*
 
 
 object nivel{
-    const anchoTotal = 28
-    const altoTotal = 12
-    const celdaSize = 50
+    const anchoTotal = 18
+    const altoTotal = 13
+    const celdaSize = 40
 
     method clearGame(){
         game.allVisuals().forEach({visual => game.removeVisual(visual)})
@@ -34,6 +34,7 @@ object nivel{
 
         //Visuales
         game.addVisual(isaac) 
+        game.addVisual(lagrima)
         
         //Movimiento de Isaac
         keyboard.up().onPressDo{isaac.moverse(isaac.position().up(1))}

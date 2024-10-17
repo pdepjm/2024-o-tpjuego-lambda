@@ -16,3 +16,4 @@ const fondoDelJuego = new Visual(
     image = "liso.png", //solo para probar
     position = game.at(1,1)
 )
+

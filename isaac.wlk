@@ -10,10 +10,28 @@ object isaac{
   method moverse(nuevaPosicion){
      position = nuevaPosicion
   }
+
+  method disparar() {
+
+  }
 }
 
-
 object lagrima{
-  method position() = isaac.position()
+
+  method image() = "isaac.png"
+  
+  var property position = isaac.position()
+
+  method moverse(nuevaPosicion){
+     position = nuevaPosicion
+  }
+
+  method disparar(){
+    keyboard.d().onPressDo{game.onTick(500,"disparo",self.disparoDerecha())}
+  }
+
+  method disparoDerecha(){
+    self.moverse(self.position().right(1))
+  }
 
 }
