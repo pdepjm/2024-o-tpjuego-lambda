@@ -5,9 +5,9 @@ import visuales.*
 
 
 object nivel{
-    const anchoTotal = 18
-    const altoTotal = 13
-    const celdaSize = 40
+    const anchoTotal = 33
+    const altoTotal = 23
+    const celdaSize = 27
 
     method clearGame(){
         game.allVisuals().forEach({visual => game.removeVisual(visual)})

@@ -9,11 +9,11 @@ class Visual{
 
 const inicioDelJuego = new Visual(
     image = "fondo.png",
-    position = game.at(1,1)
+    position = game.at(0,0)
 )
 
 const fondoDelJuego = new Visual(
-    image = "liso.png", //solo para probar
-    position = game.at(1,1)
+    image = "nivel1.png",
+    position = game.at(0,0)
 )
 

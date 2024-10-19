@@ -3,7 +3,7 @@ import nivel.*
 
 object isaac{
 
-  method image() = "isaac.png"
+  method image() = "peque.png"
 
   var property position = game.center()
 
@@ -18,7 +18,7 @@ object isaac{
 
 object lagrima{
 
-  method image() = "isaac.png"
+  method image() = "peque.png"
   
   var property position = isaac.position()
 
