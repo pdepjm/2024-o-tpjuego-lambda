@@ -11,9 +11,9 @@ object isaac{
      position = nuevaPosicion
   }
 
-  method disparar() {
-
-  }
+    method nivel2(){
+        game.say(puerta, puerta.comoesta())
+    }
 }
 
 object lagrima{
@@ -26,12 +26,22 @@ object lagrima{
      position = nuevaPosicion
   }
 
-  method disparar(){
-    keyboard.d().onPressDo{game.onTick(500,"disparo",self.disparoDerecha())}
-  }
-
   method disparoDerecha(){
     self.moverse(self.position().right(1))
   }
 
+  
+    method nivel2(){
+        game.say(puerta, puerta.comoesta())
+    }
+
+}
+
+object puerta{
+
+  method image() = "puerta.png"
+
+  var property position = game.at(8,7)
+
+  method comoesta() = "como estas"
 }

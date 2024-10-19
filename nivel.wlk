@@ -25,6 +25,12 @@ object nivel{
 
     }
 
+    method nivel2(){
+        game.say(puerta, puerta.comoesta())
+    }
+
+   
+
     method configuracion(){ //Configuracion del juego
         self.clearGame()
         game.addVisual(fondoDelJuego)
@@ -35,6 +41,7 @@ object nivel{
         //Visuales
         game.addVisual(isaac) 
         game.addVisual(lagrima)
+        game.addVisual(puerta)
         
         //Movimiento de Isaac
         keyboard.up().onPressDo{isaac.moverse(isaac.position().up(1))}
@@ -42,6 +49,7 @@ object nivel{
         keyboard.left().onPressDo{isaac.moverse(isaac.position().left(1))}
         keyboard.right().onPressDo{ isaac.moverse(isaac.position().right(1))}
 
-
+        //pasar por la puerta
+        game.whenCollideDo(puerta, {nivel => nivel.nivel2()})
     }
 }
