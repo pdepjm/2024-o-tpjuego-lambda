@@ -40,8 +40,11 @@ object nivel{
 
         //Visuales
         game.addVisual(isaac) 
-        game.addVisual(lagrima)
         game.addVisual(puerta)
+        game.addVisual(pincho1)
+        game.addVisual(pincho2)
+        game.addVisual(pincho3)
+        game.addVisual(pincho4)
         
         //Movimiento de Isaac
         keyboard.up().onPressDo{isaac.moverse(isaac.position().up(1))}
@@ -51,5 +54,16 @@ object nivel{
 
         //pasar por la puerta
         game.whenCollideDo(puerta, {nivel => nivel.nivel2()})
+
+        
+        game.whenCollideDo(isaac , {obstaculo => obstaculo.lastimar()})
+
+        //vida Isaac
+
+        if(isaac.vida == 100) {game.addVisual(vidaLlena)}
+        if(isaac.vida == 75) {game.addVisual(vidaCasillena)}
+        if(isaac.vida == 50) {game.addVisual(vidaMedia)}
+        if(isaac.vida == 25) {game.addVisual(vidaPoca)}
+        if(isaac.vida == 0) {game.addVisual(vidaVacia)}
     }
 }

@@ -3,6 +3,8 @@ import nivel.*
 
 object isaac{
 
+  var vida = 100
+
   method image() = "peque.png"
 
   var property position = game.center()
@@ -11,37 +13,37 @@ object isaac{
      position = nuevaPosicion
   }
 
-    method nivel2(){
+  method nivel2(){
         game.say(puerta, puerta.comoesta())
+        
     }
+  
+  method danio() {vida = vida - 25}
+  
 }
 
-object lagrima{
+class Pinchos{
 
-  method image() = "peque.png"
+  method image() = "pinchosDefinitivo.png"
+
+  var property position = game.at(15,1)
   
-  var property position = isaac.position()
-
-  method moverse(nuevaPosicion){
-     position = nuevaPosicion
+  method lastimar(){
+      isaac.danio()
   }
-
-  method disparoDerecha(){
-    self.moverse(self.position().right(1))
-  }
-
-  
-    method nivel2(){
-        game.say(puerta, puerta.comoesta())
-    }
-
 }
+
+const pincho1 = new Pinchos()
+const pincho2 = new Pinchos(position= game.at(15,3))
+const pincho3 = new Pinchos(position= game.at(15,5))
+const pincho4 = new Pinchos(position= game.at(15,7))
+
 
 object puerta{
 
-  method image() = "puerta.png"
+  method image() = "puerta1.png"
 
-  var property position = game.at(8,7)
+  var property position = game.at(15,18)
 
   method comoesta() = "como estas"
 }
