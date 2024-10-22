@@ -2,6 +2,8 @@ import wollok.game.*
 import isaac.*
 import visuales.*
 
+const limite_superior = 18
+
 
 
 object nivel{
@@ -12,6 +14,9 @@ object nivel{
     method clearGame(){
         game.allVisuals().forEach({visual => game.removeVisual(visual)})
     }
+
+            //vida Isaac
+
 
     method inicio(){
         game.title("The binding of isaac argento")
@@ -39,14 +44,16 @@ object nivel{
 	    game.cellSize(celdaSize)
 
         //Visuales
-        game.addVisual(isaac) 
         game.addVisual(puerta)
         game.addVisual(pincho1)
         game.addVisual(pincho2)
         game.addVisual(pincho3)
         game.addVisual(pincho4)
+        game.addVisual(isaac) 
         
         //Movimiento de Isaac
+
+
         keyboard.up().onPressDo{isaac.moverse(isaac.position().up(1))}
         keyboard.down().onPressDo{isaac.moverse(isaac.position().down(1))}
         keyboard.left().onPressDo{isaac.moverse(isaac.position().left(1))}
@@ -57,13 +64,5 @@ object nivel{
 
         
         game.whenCollideDo(isaac , {obstaculo => obstaculo.lastimar()})
-
-        //vida Isaac
-
-        if(isaac.vida == 100) {game.addVisual(vidaLlena)}
-        if(isaac.vida == 75) {game.addVisual(vidaCasillena)}
-        if(isaac.vida == 50) {game.addVisual(vidaMedia)}
-        if(isaac.vida == 25) {game.addVisual(vidaPoca)}
-        if(isaac.vida == 0) {game.addVisual(vidaVacia)}
     }
 }

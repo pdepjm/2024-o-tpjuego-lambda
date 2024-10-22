@@ -1,13 +1,15 @@
 import wollok.game.*
 import nivel.*
 
+
+
 object isaac{
 
   var vida = 100
 
   method image() = "peque.png"
 
-  var property position = game.center()
+  var property position = game.at(2 , 2)
 
   method moverse(nuevaPosicion){
      position = nuevaPosicion
@@ -19,7 +21,8 @@ object isaac{
     }
   
   method danio() {vida = vida - 25}
-  
+
+
 }
 
 class Pinchos{
@@ -43,7 +46,7 @@ object puerta{
 
   method image() = "puerta1.png"
 
-  var property position = game.at(15,18)
+  var property position = game.at(15,19)
 
   method comoesta() = "como estas"
 }
