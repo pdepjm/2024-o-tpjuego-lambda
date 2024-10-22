@@ -1,6 +1,10 @@
 import wollok.game.*
 import nivel.*
 
+const LIMITE_IZQUIERDO = 1
+const LIMITE_DERECHO = 30 // Ajusta estos valores según el tamaño del mapa
+const LIMITE_SUPERIOR = 18
+const LIMITE_INFERIOR = 1
 
 
 object isaac{
@@ -12,7 +16,13 @@ object isaac{
   var property position = game.at(2 , 2)
 
   method moverse(nuevaPosicion){
-     position = nuevaPosicion
+     var nuevaColumna = nuevaPosicion.column()
+     var nuevaFila = nuevaPosicion.row()
+
+     if (nuevaColumna >= LIMITE_IZQUIERDO && nuevaColumna <= LIMITE_DERECHO && nuevaFila >= LIMITE_SUPERIOR && nuevaFila <= LIMITE_INFERIOR) 
+    {
+      position = nuevaPosicion
+    }
   }
 
   method nivel2(){
@@ -21,6 +31,7 @@ object isaac{
     }
   
   method danio() {vida = vida - 25}
+  
 
 
 }

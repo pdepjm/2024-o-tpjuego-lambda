@@ -8,12 +8,12 @@ class Visual{
 }
 
 const inicioDelJuego = new Visual(
-    image = "fondo.png",
+    image = "pantallaDeCarga.png",
     position = game.at(0,0)
 )
 
 const fondoDelJuego = new Visual(
-    image = "nivel1.png",
+    image = "nivel.png",
     position = game.at(0,0)
 )
 

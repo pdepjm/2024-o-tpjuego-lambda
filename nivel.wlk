@@ -2,7 +2,6 @@ import wollok.game.*
 import isaac.*
 import visuales.*
 
-const limite_superior = 18
 
 
 
