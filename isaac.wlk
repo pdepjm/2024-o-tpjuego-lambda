@@ -25,7 +25,7 @@ object isaac{
           game.stop()
       }
       else{
-        game.say(self, "me hice "+ self.vida() + " de daño")
+        game.say(self, "me queda "+ self.vida() + " de vida")
       }
     }
 }

@@ -13,7 +13,7 @@ object nivel{
         game.allVisuals().forEach({visual => game.removeVisual(visual)})
     }
 
-        //vida Isaac
+    //vida Isaac
         
     method inicio(){
         game.title("The binding of isaac argento")
@@ -21,7 +21,6 @@ object nivel{
 	    game.width(anchoTotal)
 	    game.cellSize(celdaSize)
         game.addVisual(inicioDelJuego)
-       // game.boardGround("fondo.png") //Aca hay que arreglar el fondo o poner uno nuevo (Esta feo)
 
         keyboard.s().onPressDo({self.configuracion()})
     }
