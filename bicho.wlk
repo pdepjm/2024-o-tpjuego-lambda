@@ -1,3 +1,3 @@
-object bicho{
-    
+object bicho {
+  
 }

@@ -1,11 +1,9 @@
 import wollok.game.*
 import nivel.*
 
-
-
 object isaac{
 
-  var vida = 100
+  var property vida = 100
 
   method image() = "peque.png"
 
@@ -16,13 +14,18 @@ object isaac{
   }
 
   method nivel2(){
-        game.say(puerta, puerta.comoesta())
-        
+        game.say(puerta, puerta.comoesta())     
     }
   
-  method danio() {vida = vida - 25}
+  method danio(n) {
+    vida = vida -n
+    game.say(self, "me hice "+ self.vida() + " de daño")
 
-
+    if(self.vida() == 0){
+        game.say(self, "me mori xp")
+        game.stop()
+    }
+    }
 }
 
 class Pinchos{
@@ -32,7 +35,7 @@ class Pinchos{
   var property position = game.at(15,1)
   
   method lastimar(){
-      isaac.danio()
+      isaac.danio(5)
   }
 }
 
