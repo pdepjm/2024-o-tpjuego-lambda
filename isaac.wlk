@@ -7,7 +7,7 @@ object isaac{
 
   method image() = "peque.png"
 
-  var property position = game.at(2 , 2)
+  var property position = game.at(2,2)
 
   method moverse(nuevaPosicion){
      position = nuevaPosicion
@@ -19,12 +19,14 @@ object isaac{
   
   method danio(n) {
     vida = vida -n
-    game.say(self, "me hice "+ self.vida() + " de daño")
 
-    if(self.vida() == 0){
-        game.say(self, "me mori xp")
-        game.stop()
-    }
+      if(self.vida() == 0){
+          game.say(self, "me mori xp")
+          game.stop()
+      }
+      else{
+        game.say(self, "me hice "+ self.vida() + " de daño")
+      }
     }
 }
 

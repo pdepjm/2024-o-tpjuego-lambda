@@ -1,6 +1,7 @@
 import wollok.game.*
 import isaac.*
 import visuales.*
+import bicho.*
 
 const limite_superior = 18
 
@@ -43,7 +44,8 @@ object nivel{
         game.addVisual(pincho2)
         game.addVisual(pincho3)
         game.addVisual(pincho4)
-        game.addVisual(isaac) 
+        game.addVisual(isaac)
+        game.addVisual(bicho)
         
         //Movimiento de Isaac
         keyboard.up().onPressDo{isaac.moverse(isaac.position().up(1))}
@@ -51,6 +53,7 @@ object nivel{
         keyboard.left().onPressDo{isaac.moverse(isaac.position().left(1))}
         keyboard.right().onPressDo{ isaac.moverse(isaac.position().right(1))}
 
+        game.onTick(1000, "movimiento", bicho.moverse())
         //pasar por la puerta
         game.whenCollideDo(puerta, {nivel => nivel.nivel2()})
         game.whenCollideDo(isaac , {obstaculo => obstaculo.lastimar()})

@@ -1,2 +1,14 @@
 import isaac.*
+import bicho.*
+import nivel.*
 
+describe "tests para isaac" {
+  test "isaac al tocar un pinche se le restan 5 pts de vida" {
+    pincho1.lastimar()
+    assert.equals(95, isaac.vida())
+  }
+  test "isaac al tocar un bicho se le restan 10 pts de vida" {
+    pincho1.lastimar()
+    assert.equals(95, isaac.vida())
+  }
+}
