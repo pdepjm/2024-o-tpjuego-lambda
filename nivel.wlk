@@ -1,8 +1,7 @@
 import wollok.game.*
 import isaac.*
 import visuales.*
-
-
+import bicho.*
 
 
 object nivel{
@@ -14,9 +13,8 @@ object nivel{
         game.allVisuals().forEach({visual => game.removeVisual(visual)})
     }
 
-            //vida Isaac
-
-
+        //vida Isaac
+        
     method inicio(){
         game.title("The binding of isaac argento")
         game.height(altoTotal)
@@ -26,14 +24,11 @@ object nivel{
        // game.boardGround("fondo.png") //Aca hay que arreglar el fondo o poner uno nuevo (Esta feo)
 
         keyboard.s().onPressDo({self.configuracion()})
-
     }
 
     method nivel2(){
         game.say(puerta, puerta.comoesta())
     }
-
-   
 
     method configuracion(){ //Configuracion del juego
         self.clearGame()
@@ -48,20 +43,18 @@ object nivel{
         game.addVisual(pincho2)
         game.addVisual(pincho3)
         game.addVisual(pincho4)
-        game.addVisual(isaac) 
+        game.addVisual(isaac)
+        game.addVisual(bicho)
         
         //Movimiento de Isaac
-
-
         keyboard.up().onPressDo{isaac.moverse(isaac.position().up(1))}
         keyboard.down().onPressDo{isaac.moverse(isaac.position().down(1))}
         keyboard.left().onPressDo{isaac.moverse(isaac.position().left(1))}
         keyboard.right().onPressDo{ isaac.moverse(isaac.position().right(1))}
 
+        game.onTick(1000, "movimiento", bicho.moverse())
         //pasar por la puerta
         game.whenCollideDo(puerta, {nivel => nivel.nivel2()})
-
-        
         game.whenCollideDo(isaac , {obstaculo => obstaculo.lastimar()})
     }
 }
