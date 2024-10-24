@@ -10,34 +10,25 @@ class Enemigo{
 
     method image() = "enemigo.png"
 
-    method subir() {
-        if(position.y() < 15 ){
+    method moverse() {game.onTick(200, "movimiento", {self.movimiento()})}
+
+    method movimiento(){
+        if(position.y()<15 and subiendo){
             position = position.up(1)
-        }
-    }
-
-    method bajar(){
-        if(position.y() > 3){
+        }else{
             position = position.down(1)
-        }
-    }
-
-    method moverse() {
-        if(subiendo){
-            game.onTick(30, "subir", {self.subir()} )
-            if(position.y() == 10){
-                subiendo = false
+        if(position.y()>3){
+            subiendo=false
             }
-        }
-        if (subiendo == false){
-            game.onTick(30, "bajar", {self.bajar()} )
+        if(position.y() == 3){
+                subiendo = true
+            }
         }
     }
     
     method lastimar(){
         isaac.danio(10)
-    }
-    
+    }  
 }
 
 const bicho = new Enemigo( position = game.at(20,3))
