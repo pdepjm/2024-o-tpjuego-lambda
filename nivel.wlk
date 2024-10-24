@@ -12,8 +12,6 @@ object nivel{
     method clearGame(){
         game.allVisuals().forEach({visual => game.removeVisual(visual)})
     }
-
-    //vida Isaac
         
     method inicio(){
         game.title("The binding of isaac argento")
@@ -50,8 +48,10 @@ object nivel{
         keyboard.down().onPressDo{isaac.moverse(isaac.position().down(1))}
         keyboard.left().onPressDo{isaac.moverse(isaac.position().left(1))}
         keyboard.right().onPressDo{ isaac.moverse(isaac.position().right(1))}
+        
+        //MovimientoEnemigos
+        bicho.moverse()
 
-        game.onTick(1000, "movimiento", bicho.moverse())
         //pasar por la puerta
         game.whenCollideDo(puerta, {nivel => nivel.nivel2()})
         game.whenCollideDo(isaac , {obstaculo => obstaculo.lastimar()})

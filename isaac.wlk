@@ -18,7 +18,7 @@ object isaac{
     }
   
   method danio(n) {
-    vida = vida -n
+      vida = vida -n
 
       if(self.vida() == 0){
           game.say(self, "me mori xp")
@@ -29,6 +29,7 @@ object isaac{
       }
     }
 }
+
 
 class Pinchos{
 
@@ -55,3 +56,4 @@ object puerta{
 
   method comoesta() = "como estas"
 }
+

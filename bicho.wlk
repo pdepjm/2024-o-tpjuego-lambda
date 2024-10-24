@@ -10,19 +10,19 @@ class Enemigo{
 
     method image() = "enemigo.png"
 
-    method moverse() {game.onTick(200, "movimiento", {self.movimiento()})}
+    method moverse() {game.onTick(400, "movimiento", {self.movimientoVertical()})}
 
-    method movimiento(){
+    method movimientoVertical(){
         if(position.y()<15 and subiendo){
             position = position.up(1)
         }else{
             position = position.down(1)
-        if(position.y()>3){
-            subiendo=false
-            }
-        if(position.y() == 3){
+            if(position.y()>3){
+                subiendo=false
+                }
+            if(position.y() == 3){
                 subiendo = true
-            }
+                }
         }
     }
     
