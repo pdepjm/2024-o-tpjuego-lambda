@@ -9,9 +9,20 @@ object isaac{
 
   var property position = game.at(2,2)
 
-  method moverse(nuevaPosicion){
-     position = nuevaPosicion
+  method moverse(nuevaPosicion) {
+    // Define los límites del área de juego
+    const limiteX = 30
+    const limiteY = 18
+    const minimoX = 1
+    const minimoY = 1
+
+    // Solo actualiza la posición si está dentro de los límites
+    if (nuevaPosicion.x() >= minimoX && nuevaPosicion.x() <= limiteX &&
+        nuevaPosicion.y() >= minimoY && nuevaPosicion.y() <= limiteY) {
+      position = nuevaPosicion
+    }
   }
+
 
   method nivel2(){
         game.say(puerta, puerta.comoesta())     
@@ -22,7 +33,7 @@ object isaac{
 
       if(self.vida() == 0){
           game.say(self, "me mori xp")
-          game.stop()
+          nivel.muerte()
       }
       else{
         game.say(self, "me queda "+ self.vida() + " de vida")

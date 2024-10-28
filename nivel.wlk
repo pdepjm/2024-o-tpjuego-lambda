@@ -56,4 +56,11 @@ object nivel{
         game.whenCollideDo(puerta, {nivel => nivel.nivel2()})
         game.whenCollideDo(isaac , {obstaculo => obstaculo.lastimar()})
     }
+
+    method muerte(){
+        
+        game.stop()
+        keyboard.s().onPressDo({self.configuracion()})
+
+    }
 }

@@ -17,3 +17,8 @@ const fondoDelJuego = new Visual(
     position = game.at(0,0)
 )
 
+const muerte = new Visual(
+    image = "muerte.png",
+    position = game.center()
+)
+
