@@ -2333,3 +2333,6 @@
 {"level":"info","message":"⌛ Building environment","timeElapsed":102,"timestamp":"2024-10-28T18:56:17.566Z"}
 {"level":"info","message":"⌛ Validating isaac.wlk","timeElapsed":130,"timestamp":"2024-10-28T18:56:17.705Z"}
 {"exitCode":0,"level":"info","message":"👾 Game executed main.isaacGame on c:\\Users\\Juanchi\\2024-o-tpjuego-lambda","timeElapsed":61716,"timestamp":"2024-10-28T18:56:51.460Z"}
+{"exitCode":0,"level":"info","message":"👾 Game executed main.isaacGame on c:\\Users\\fabri\\Downloads\\TePe\\2024-o-tpjuego-lambda","timeElapsed":65213,"timestamp":"2024-11-04T16:42:30.191Z"}
+{"exitCode":0,"level":"info","message":"👾 Game executed main.isaacGame on c:\\Users\\fabri\\Downloads\\TePe\\2024-o-tpjuego-lambda","timeElapsed":25102,"timestamp":"2024-11-04T16:44:30.107Z"}
+{"exitCode":0,"level":"info","message":"👾 Game executed main.isaacGame on c:\\Users\\fabri\\Downloads\\TePe\\2024-o-tpjuego-lambda","timeElapsed":122260,"timestamp":"2024-11-04T17:35:20.270Z"}

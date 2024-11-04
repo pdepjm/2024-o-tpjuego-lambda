@@ -23,9 +23,8 @@ object isaac{
     }
   }
 
-
-  method nivel2(){
-        game.say(puerta, puerta.comoesta())     
+  method avanzarNivel(){
+      nivel.cambiarEscenario(nivel2)    
     }
   
   method danio(n) {
@@ -33,7 +32,7 @@ object isaac{
 
       if(self.vida() == 0){
           game.say(self, "me mori xp")
-          nivel.muerte()
+          //nivel.muerte()
       }
       else{
         game.say(self, "me queda "+ self.vida() + " de vida")
@@ -59,12 +58,14 @@ const pincho3 = new Pinchos(position= game.at(15,5))
 const pincho4 = new Pinchos(position= game.at(15,7))
 
 
-object puerta{
+class Puerta{
 
   method image() = "puerta1.png"
 
-  var property position = game.at(15,19)
+  var property position = game.at(15,18)
 
-  method comoesta() = "como estas"
+  method lastimar() = "como estas"
 }
 
+const puerta1 = new Puerta()
+const puerta2 = new Puerta(position = game.at(15,1))

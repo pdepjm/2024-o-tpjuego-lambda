@@ -8,7 +8,7 @@ describe "tests para isaac" {
     assert.equals(95, isaac.vida())
   }
   test "isaac al tocar un bicho se le restan 10 pts de vida" {
-    bicho.lastimar()
+    bicho1.lastimar()
     assert.equals(90, isaac.vida())
   }
 }

@@ -31,4 +31,6 @@ class Enemigo{
     }  
 }
 
-const bicho = new Enemigo( position = game.at(20,3))
+const bicho1 = new Enemigo( position = game.at(20,3))
+const bicho2 = new Enemigo( position = game.at(10,3))
+const bicho3 = new Enemigo( position = game.at(20,3))
