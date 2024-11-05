@@ -28,4 +28,4 @@ class Puerta{
 }
 
 const puerta1 = new Puerta()
-const puerta2 = new Puerta(position = game.at(15,1))
+const puerta2 = new Puerta(position = game.at(18,18))

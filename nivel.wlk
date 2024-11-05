@@ -4,24 +4,27 @@ import visuales.*
 import bicho.*
 import obstaculos.*
 
-object pantallaCarga{
+object nivel{
+
     const anchoTotal = 33
     const altoTotal = 23
     const celdaSize = 27
-        
+
+    var escenarioActual = nivel1
+
     method inicio(){
+
+        
+        self.configuracion()
+
         game.title("El reino de las arenas")
         game.height(altoTotal)
 	    game.width(anchoTotal)
 	    game.cellSize(celdaSize)
         game.addVisual(inicioDelJuego)
 
-        keyboard.s().onPressDo({nivel.configuracion()})
+        keyboard.s().onPressDo({self.cambiarEscenario(escenarioActual)})
     }
-}
-
-object nivel{
-    var escenarioActual = nivel1
 
     method clearGame(){
         game.allVisuals().forEach({visual => game.removeVisual(visual)})
@@ -37,13 +40,7 @@ object nivel{
     }
 
     method configuracion(){ //Configuracion del juego
-        self.clearGame()
-        game.addVisual(fondoDelJuego)
-
-        //Visuales
-        escenarioActual.aniadirIsaac()
-        escenarioActual.visuales()
-
+    
         //Movimiento de Isaac
         keyboard.up().onPressDo{isaac.moverse(isaac.position().up(1))}
         keyboard.down().onPressDo{isaac.moverse(isaac.position().down(1))}
@@ -55,16 +52,9 @@ object nivel{
         game.whenCollideDo(isaac, {obstaculo => obstaculo.lastimar()})
     }
 
-
     method muerte(){
         self.clearGame()
-        pantallaCarga.inicio()
-    }
-
-
-    method reinicio(){
-        keyboard.r().onPressDo{self.clearGame()}
-        pantallaCarga.inicio()
+        self.inicio()
     }
 }
 

@@ -5,6 +5,11 @@ import obstaculos.*
 
 
 program  isaacGame {
-	pantallaCarga.inicio()
+	
+    const musica = game.sound("fondoMusica.mp3")
+	musica.shouldLoop(true)
+    game.schedule(500, { musica.play()} )
+
+	nivel.inicio()
 	game.start()
 }
