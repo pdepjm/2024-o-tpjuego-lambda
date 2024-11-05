@@ -6,8 +6,7 @@ UTN - Facultad Regional Buenos Aires - Materia Paradigmas de Programación
 
 - Juan Jose Nogueira
 - Fabricio Lopes 
-- Lourdes
-
+  
 
 ## Capturas 
 

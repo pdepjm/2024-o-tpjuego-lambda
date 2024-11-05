@@ -2,41 +2,43 @@ import wollok.game.*
 import isaac.*
 import visuales.*
 import bicho.*
+import obstaculos.*
 
-
-object nivel{
+object pantallaCarga{
     const anchoTotal = 33
     const altoTotal = 23
     const celdaSize = 27
-
-    var escenarioActual = nivel1
-    method clearGame(){
-        game.allVisuals().forEach({visual => game.removeVisual(visual)})
-    }
         
     method inicio(){
-        game.title("The binding of isaac argento")
+        game.title("El reino de las arenas")
         game.height(altoTotal)
 	    game.width(anchoTotal)
 	    game.cellSize(celdaSize)
         game.addVisual(inicioDelJuego)
 
-        keyboard.s().onPressDo({self.configuracion()})
+        keyboard.s().onPressDo({nivel.configuracion()})
     }
-/*
-    method nivel2(){
-        game.say(puerta1, puerta1.avanzarNivel())
+}
+
+object nivel{
+    var escenarioActual = nivel1
+
+    method clearGame(){
+        game.allVisuals().forEach({visual => game.removeVisual(visual)})
     }
-*/
+
     method cambiarEscenario(nivel){
         escenarioActual = nivel
+
+        self.clearGame()
+        game.addVisual(fondoDelJuego)
+        escenarioActual.aniadirIsaac()
+        escenarioActual.visuales()
     }
+
     method configuracion(){ //Configuracion del juego
         self.clearGame()
         game.addVisual(fondoDelJuego)
-        game.height(altoTotal)
-	    game.width(anchoTotal)
-	    game.cellSize(celdaSize)
 
         //Visuales
         escenarioActual.aniadirIsaac()
@@ -47,28 +49,33 @@ object nivel{
         keyboard.down().onPressDo{isaac.moverse(isaac.position().down(1))}
         keyboard.left().onPressDo{isaac.moverse(isaac.position().left(1))}
         keyboard.right().onPressDo{ isaac.moverse(isaac.position().right(1))}
-        
-        //MovimientoEnemigos
 
         //pasar por la puerta
         game.whenCollideDo(puerta1, {nivel => nivel.avanzarNivel()})
         game.whenCollideDo(isaac, {obstaculo => obstaculo.lastimar()})
     }
-/*
-    method muerte(){
-        
-        game.stop()
-        keyboard.s().onPressDo({self.configuracion()})
 
+
+    method muerte(){
+        self.clearGame()
+        pantallaCarga.inicio()
     }
-    */
+
+
+    method reinicio(){
+        keyboard.r().onPressDo{self.clearGame()}
+        pantallaCarga.inicio()
+    }
 }
+
 class Escenario{
     method aniadirIsaac(){
         game.addVisual(isaac)
     }
+
     method visuales()
 }
+
 class Escenario1 inherits Escenario{
     override method visuales(){ 
         game.addVisual(puerta1)
@@ -89,8 +96,8 @@ class Escenario2 inherits Escenario{
         game.addVisual(bicho3)
         
         bicho2.moverse()
-        bicho3.moverse()
     }
 }
+
 const nivel1 = new Escenario1()
 const nivel2 = new Escenario2()

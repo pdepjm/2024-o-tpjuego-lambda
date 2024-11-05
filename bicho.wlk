@@ -1,6 +1,7 @@
 import wollok.game.*
 import isaac.*
 import nivel.*
+import obstaculos.*
 
 
 class Enemigo{

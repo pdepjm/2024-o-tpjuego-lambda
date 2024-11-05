@@ -1,6 +1,7 @@
 import isaac.*
 import bicho.*
 import nivel.*
+import obstaculos.*
 
 describe "tests para isaac" {
   test "isaac al tocar un pinche se le restan 5 pts de vida" {

@@ -1,9 +1,10 @@
 import wollok.game.*
 import isaac.*
 import nivel.*
+import obstaculos.*
 
 
 program  isaacGame {
-	nivel.inicio()
+	pantallaCarga.inicio()
 	game.start()
 }
