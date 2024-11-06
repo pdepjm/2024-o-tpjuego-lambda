@@ -1,9 +1,17 @@
-import pepita.*
+import isaac.*
+import bicho.*
+import nivel.*
+import obstaculos.*
 
-describe "group of tests for pepita" {
-
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+describe "tests para isaac" {
+  test "isaac al tocar un pinche se le restan 5 pts de vida" {
+    pincho1.lastimar()
+    assert.equals(95, isaac.vida())
   }
-
+  test "isaac al tocar un bicho se le restan 10 pts de vida" {
+    bicho1.lastimar()
+    assert.equals(90, isaac.vida())
+  }
 }
+
+
