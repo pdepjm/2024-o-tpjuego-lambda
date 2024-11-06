@@ -1,28 +1,26 @@
-#  The binding of unArgentino
+#  EL TEMPLO DE LAS ARENAS
 
 UTN - Facultad Regional Buenos Aires - Materia Paradigmas de Programación
 
 ## Equipo de desarrollo: 
 
 - Juan Jose Nogueira
-- Fabricio Lopes 
+- Fabricio Lopez Garro
   
 
 ## Capturas 
 
-![pepita](assets/golondrina.png)
+![pepita](assets/pantallaDeCarga.png)
 
 ## Reglas de Juego / Instrucciones
 
-Hacer daño a los enemigos disparando "lagrimas" para pasar el nivel
-Agarrar items especiales para modificar el ataque
-Esquivas las superficies con obstaculos que hagan daño
 Llegar hasta la proxima puerta para pasar de nivel 
 Una vez que supere todas las habitaciones gana el juego
-Tiene un nivel de vida basado en corazones, al vaciarse se vuelve al inicio
-
+Cada enemigo y obstáculo resta vida
+Si el nivel de vida llega a 0, se termina el juego
 
 ## Controles:
 
-- `Up` para...
+- `Up` `Down` `Left` `Right` para moverse en el juego
+- `S` para abrir una puerta  
 

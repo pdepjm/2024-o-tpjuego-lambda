@@ -25,7 +25,7 @@ object isaac{
   }
 
   method avanzarNivel(){
-      nivel.cambiarEscenario(nivel2)    
+      nivel.cambiarEscenario(nivel2)
     }
   
   method danio(n) {
