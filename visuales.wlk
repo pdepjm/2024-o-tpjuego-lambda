@@ -17,4 +17,14 @@ const fondoDelJuego = new Visual(
     position = game.at(0,0)
 )
 
+const finDelJuego = new Visual(
+    image = "win.png",
+    position = game.at(0,0)
+)
+
+const gameOver = new Visual(
+    image = "perdi.png",
+    position = game.at(0,0)
+)
+
 

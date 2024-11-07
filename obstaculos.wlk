@@ -35,9 +35,10 @@ class Reja1{
   method image() = "reja1.png"
 
   method lastimar() {
-    isaac.moverse(position - 1 )
+    isaac.moverse(game.at(isaac.position().x()  , isaac.position().y() - 1))
   }
 }
+
 class Reja2 inherits Reja1{
   override method image() = "reja2.png"
 }

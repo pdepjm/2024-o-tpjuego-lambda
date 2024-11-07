@@ -1,3 +1,4 @@
+import wollok.game.*
 import isaac.*
 import bicho.*
 import nivel.*
@@ -12,6 +13,10 @@ describe "tests para isaac" {
     bicho1.lastimar()
     assert.equals(90, isaac.vida())
   }
+  test "isaac al pasar por la puerta pasa de nivel"{
+    isaac.avanzarNivel()
+    assert.equals(nivel2, nivel.escenarioActual())
+  } 
 }
 
 

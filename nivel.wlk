@@ -12,9 +12,10 @@ object nivel{
 
     var escenarioActual = nivel1
 
+    method escenarioActual() = escenarioActual
+
     method inicio(){
 
-        
         self.configuracion()
 
         game.title("El reino de las arenas")
@@ -23,7 +24,7 @@ object nivel{
 	    game.cellSize(celdaSize)
         game.addVisual(inicioDelJuego)
 
-        keyboard.s().onPressDo({self.cambiarEscenario(escenarioActual)})
+        keyboard.s().onPressDo({self.cambiarEscenario(nivel1)})
     }
 
     method clearGame(){
@@ -49,13 +50,18 @@ object nivel{
 
         //pasar por la puerta
         game.whenCollideDo(puerta1, {nivel => nivel.avanzarNivel()})
+        game.whenCollideDo(puerta2, {nivel => nivel.terminarJuego()})
         game.whenCollideDo(isaac, {obstaculo => obstaculo.lastimar()})
     }
 
     method muerte(){
         self.clearGame()
-        self.inicio()
-        
+        game.addVisual(gameOver)
+    }
+
+    method finalizar(){
+        self.clearGame()	
+        game.addVisual(finDelJuego)
     }
 }
 
