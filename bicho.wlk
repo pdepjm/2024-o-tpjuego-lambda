@@ -54,13 +54,26 @@ class Enemigo{
                 }
         }
     }
-    
-    method lastimar(){
+    method interactuar(){
         isaac.danio(10)
     }  
+}
+
+class Mago inherits Enemigo{
+
+    override method image() = "mago.png"
+
+    override method interactuar(){
+        game.onTick(300 ,"danio", {isaac.danio(5)})
+        
+        if(isaac.vida() < 50){
+            game.removeTickEvent("danio")
+        }
+    }
 }
 
 const bicho1 = new Enemigo(subiendo = false, limiteDerecho = 28 , limiteIzquierdo = 1, position = game.at(15,6))
 const bicho2 = new Enemigo(horizontal = false, limiteSuperior = 18, limiteInferior = 1, position = game.at(20,1))
 const bicho3 = new Enemigo(horizontal = false, limiteSuperior= 18, limiteInferior = 1,position = game.at(16,17))
 const bicho4 = new Enemigo(subiendo = false, limiteDerecho = 28, limiteIzquierdo = 1, position = game.at(15,16))
+const mago1 = new Mago(subiendo = false, limiteDerecho = 28 , limiteIzquierdo = 1, position = game.at(10,10))

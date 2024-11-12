@@ -28,6 +28,7 @@ object nivel{
     }
 
     method clearGame(){
+        isaac.tieneLlave(false)
         game.allVisuals().forEach({visual => game.removeVisual(visual)})
     }
 
@@ -36,6 +37,7 @@ object nivel{
         self.clearGame()
         game.addVisual(fondoDelJuego)
         isaac.moverse(game.at(2,2))
+        llave.cambiarPosicion(nivel.posicionLlave())
         escenarioActual.aniadirIsaac()
         escenarioActual.visuales()
     }
@@ -51,7 +53,11 @@ object nivel{
         //pasar por la puerta
         game.whenCollideDo(puerta1, {nivel => nivel.avanzarNivel()})
         game.whenCollideDo(puerta2, {nivel => nivel.terminarJuego()})
-        game.whenCollideDo(isaac, {obstaculo => obstaculo.lastimar()})
+        game.whenCollideDo(isaac, {obstaculo => obstaculo.interactuar()})
+    }
+
+    method quitarLlave(){
+        game.removeVisual(llave)
     }
 
     method muerte(){
@@ -66,15 +72,16 @@ object nivel{
 }
 
 class Escenario{
+    const property posicionLlave = game.at(30,5)
     method aniadirIsaac(){
         game.addVisual(isaac)
     }
-
     method visuales()
 }
 
 class Escenario1 inherits Escenario{
     override method visuales(){ 
+
         game.addVisual(puerta1)
         game.addVisual(pincho1)
         game.addVisual(pincho2)
@@ -94,10 +101,13 @@ class Escenario1 inherits Escenario{
         game.addVisual(reja10)
         game.addVisual(reja11)
         game.addVisual(reja12)
-          
+
+        game.addVisual(llave)
         game.addVisual(bicho1)
         game.addVisual(bicho2)
+        game.addVisual(mago1)
         
+        mago1.moverse()
         bicho1.moverse()
         bicho2.moverse()
     }
@@ -115,6 +125,7 @@ class Escenario2 inherits Escenario{
         game.addVisual(reja18)
         game.addVisual(reja19)
 
+        game.addVisual(llave)
         game.addVisual(pincho7)
         game.addVisual(pincho8)
         game.addVisual(pincho9)

@@ -6,11 +6,11 @@ import obstaculos.*
 
 describe "tests para isaac" {
   test "isaac al tocar un pinche se le restan 5 pts de vida" {
-    pincho1.lastimar()
+    pincho1.interactuar()
     assert.equals(95, isaac.vida())
   }
   test "isaac al tocar un bicho se le restan 10 pts de vida" {
-    bicho1.lastimar()
+    bicho1.interactuar()
     assert.equals(90, isaac.vida())
   }
   test "isaac al pasar por la puerta pasa de nivel"{
@@ -18,5 +18,3 @@ describe "tests para isaac" {
     assert.equals(nivel2, nivel.escenarioActual())
   } 
 }
-
-

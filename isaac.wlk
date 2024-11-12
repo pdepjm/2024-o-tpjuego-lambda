@@ -10,6 +10,8 @@ object isaac{
 
   var property position = game.at(2,2)
 
+  var property tieneLlave = false
+
   method moverse(nuevaPosicion) {
     // Define los límites del área de juego
     const limiteX = 30
@@ -29,7 +31,9 @@ object isaac{
   }
 
   method avanzarNivel(){
-      nivel.cambiarEscenario(nivel2)
+      if (tieneLlave)
+        nivel.cambiarEscenario(nivel2)
+      else game.say(self, "me falta la llave")
     }
   
   method danio(n) { 
@@ -48,4 +52,3 @@ object isaac{
       nivel.finalizar()
     }
 }
-
