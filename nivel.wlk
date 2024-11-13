@@ -51,13 +51,7 @@ object nivel{
         keyboard.right().onPressDo{ isaac.moverse(isaac.position().right(1))}
 
         //interactuar
-        //game.whenCollideDo(puerta1, {nivel => nivel.avanzarNivel()})
-        //game.whenCollideDo(puerta2, {nivel => nivel.terminarJuego()})
         game.whenCollideDo(isaac, {obstaculo => obstaculo.interactuar()})
-    }
-
-    method quitarLlave(){
-        game.removeVisual(llave)
     }
 
     method muerte(){
@@ -83,6 +77,7 @@ class Escenario1 inherits Escenario{
     override method visuales(){ 
 
         game.addVisual(puerta1)
+        game.addVisual(cofre)
         game.addVisual(pincho1)
         game.addVisual(pincho2)
         game.addVisual(pincho3)
@@ -101,7 +96,19 @@ class Escenario1 inherits Escenario{
         game.addVisual(reja10)
         game.addVisual(reja11)
         game.addVisual(reja12)
+        game.addVisual(hitbox1)
+        game.addVisual(hitbox2)
+        game.addVisual(hitbox3)
+        game.addVisual(hitbox4)
+        game.addVisual(hitbox5)
+        game.addVisual(hitbox6)
+        game.addVisual(hitbox7)
+        game.addVisual(hitbox8)
+        game.addVisual(hitbox9)
+        game.addVisual(hitbox10)
+       
 
+        game.addVisual(cura)
         game.addVisual(llave)
         game.addVisual(bicho1)
         game.addVisual(bicho2)
@@ -111,7 +118,7 @@ class Escenario1 inherits Escenario{
         bicho1.moverse()
         bicho2.moverse()
 
-        game.whenCollideDo(puerta1, {nivel => nivel.avanzarNivel()})
+        game.whenCollideDo(puerta1, {nivel => nivel.avanzarNivel(nivel2)})
     }
 }
 
@@ -126,7 +133,14 @@ class Escenario2 inherits Escenario{
         game.addVisual(reja17)
         game.addVisual(reja18)
         game.addVisual(reja19)
+        game.addVisual(hitbox11)
+        game.addVisual(hitbox12)
+        game.addVisual(hitbox13)
+        game.addVisual(hitbox14)
+        game.addVisual(hitbox15)
+        game.addVisual(hitbox16)
 
+        game.addVisual(cura)
         game.addVisual(llave)
         game.addVisual(pincho7)
         game.addVisual(pincho8)
@@ -143,16 +157,46 @@ class Escenario2 inherits Escenario{
         game.addVisual(pincho19)
         game.addVisual(pincho20)
         
-
+        game.addVisual(mago2)
         game.addVisual(bicho3)
         game.addVisual(bicho4)
         
+        mago2.moverse()
         bicho3.moverse()
         bicho4.moverse()
 
-        game.whenCollideDo(puerta2, {nivel => nivel.terminarJuego()})
+        game.whenCollideDo(puerta2, {nivel => nivel.avanzarNivel(nivel3)})
+    }
+}
+
+class Escenario3 inherits Escenario{
+    override method visuales(){ 
+        game.addVisual(puerta3)
+
+        game.addVisual(cura)
+        game.addVisual(llave)
+        
+        game.addVisual(pincho21)
+        game.addVisual(pincho22)
+        game.addVisual(pincho23)
+        game.addVisual(pincho24)
+        game.addVisual(pincho25)
+        game.addVisual(pincho26)
+        
+        game.addVisual(mago3)
+        game.addVisual(fantasma1)
+        game.addVisual(fantasma2)
+        game.addVisual(bicho5)
+        
+        fantasma1.moverse()
+        fantasma2.moverse()
+        mago3.moverse()
+        bicho5.moverse()
+
+        game.whenCollideDo(puerta3, {nivel => nivel.terminarJuego()})
     }
 }
 
 const nivel1 = new Escenario1(posicionLlave= game.at(30,3))
 const nivel2 = new Escenario2(posicionLlave= game.at(4,10))
+const nivel3 = new Escenario3(posicionLlave= game.at(3,17))

@@ -6,7 +6,7 @@ object isaac{
 
   var property vida = 100
 
-  method image() = "peque.png"
+  var property image = "peque.png"
 
   var property position = game.at(2,2)
 
@@ -30,9 +30,9 @@ object isaac{
     }
   }
 
-  method avanzarNivel(){
+  method avanzarNivel(escenario){
       if (tieneLlave)
-        nivel.cambiarEscenario(nivel2)
+        nivel.cambiarEscenario(escenario)
       else game.say(self, "me falta la llave")
     }
   
@@ -48,6 +48,7 @@ object isaac{
     }
 
     method terminarJuego(){
-      nivel.finalizar()
+      if(tieneLlave && nivel.escenarioActual() == nivel3) 
+        nivel.finalizar()
     }
 }
