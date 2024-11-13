@@ -1531,3 +1531,8 @@
 {"level":"info","message":"⌛ Validating obstaculos.wlk","timeElapsed":122,"timestamp":"2024-11-12T17:34:28.484Z"}
 {"level":"info","message":"⌛ Building environment","timeElapsed":1148,"timestamp":"2024-11-12T17:34:41.579Z"}
 {"level":"info","message":"⌛ Validating nivel.wlk","timeElapsed":350,"timestamp":"2024-11-12T17:34:42.167Z"}
+{"failures":[],"level":"info","message":"🧪 Test runner executed on c:\\Users\\fabri\\Downloads\\TePe\\2024-o-tpjuego-lambda","result":{"failed":0,"ok":1},"timeElapsed":415,"timestamp":"2024-11-13T17:21:32.171Z"}
+{"failures":[],"level":"info","message":"🧪 Test runner executed on c:\\Users\\fabri\\Downloads\\TePe\\2024-o-tpjuego-lambda","result":{"failed":0,"ok":1},"timeElapsed":403,"timestamp":"2024-11-13T17:22:32.627Z"}
+{"failures":[],"level":"info","message":"🧪 Test runner executed on c:\\Users\\fabri\\Downloads\\TePe\\2024-o-tpjuego-lambda","result":{"failed":0,"ok":1},"timeElapsed":502,"timestamp":"2024-11-13T18:24:54.558Z"}
+{"failures":[],"level":"info","message":"🧪 Test runner executed on c:\\Users\\fabri\\Downloads\\TePe\\2024-o-tpjuego-lambda","result":{"failed":0,"ok":1},"timeElapsed":644,"timestamp":"2024-11-13T18:25:32.916Z"}
+{"failures":[],"level":"info","message":"🧪 Test runner executed on c:\\Users\\fabri\\Downloads\\TePe\\2024-o-tpjuego-lambda","result":{"failed":0,"ok":1},"timeElapsed":730,"timestamp":"2024-11-13T18:26:28.863Z"}

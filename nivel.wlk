@@ -50,9 +50,9 @@ object nivel{
         keyboard.left().onPressDo{isaac.moverse(isaac.position().left(1))}
         keyboard.right().onPressDo{ isaac.moverse(isaac.position().right(1))}
 
-        //pasar por la puerta
-        game.whenCollideDo(puerta1, {nivel => nivel.avanzarNivel()})
-        game.whenCollideDo(puerta2, {nivel => nivel.terminarJuego()})
+        //interactuar
+        //game.whenCollideDo(puerta1, {nivel => nivel.avanzarNivel()})
+        //game.whenCollideDo(puerta2, {nivel => nivel.terminarJuego()})
         game.whenCollideDo(isaac, {obstaculo => obstaculo.interactuar()})
     }
 
@@ -72,7 +72,7 @@ object nivel{
 }
 
 class Escenario{
-    const property posicionLlave = game.at(30,5)
+    const property posicionLlave
     method aniadirIsaac(){
         game.addVisual(isaac)
     }
@@ -110,6 +110,8 @@ class Escenario1 inherits Escenario{
         mago1.moverse()
         bicho1.moverse()
         bicho2.moverse()
+
+        game.whenCollideDo(puerta1, {nivel => nivel.avanzarNivel()})
     }
 }
 
@@ -147,8 +149,10 @@ class Escenario2 inherits Escenario{
         
         bicho3.moverse()
         bicho4.moverse()
+
+        game.whenCollideDo(puerta2, {nivel => nivel.terminarJuego()})
     }
 }
 
-const nivel1 = new Escenario1()
-const nivel2 = new Escenario2()
+const nivel1 = new Escenario1(posicionLlave= game.at(30,3))
+const nivel2 = new Escenario2(posicionLlave= game.at(4,10))

@@ -32,7 +32,7 @@ class Puerta{
   var property position = game.at(15,18)
 }
 
-class Reja1{
+class Reja{
   var property position = game.at(6,12)
 
   const imagen = "reja2.png"
@@ -45,7 +45,7 @@ class Reja1{
 }
 
 object llave {
-  var position = game.at(21,10)
+  var property position = game.at(21,10)
   
   method image() = "llavePuerta.png"
 
@@ -54,30 +54,30 @@ object llave {
     nivel.quitarLlave()
   }
   method cambiarPosicion(nuevaPosicion){
-    position = nuevaPosicion
+    self.position(nuevaPosicion)
   }
 }
 
-const reja1 = new Reja1(imagen = "reja1.png")
-const reja2 = new Reja1(position = game.at(8,12))
-const reja3 = new Reja1(position = game.at(10,12))
-const reja4 = new Reja1(position = game.at(12,12))
-const reja5 = new Reja1(position = game.at(14,12))
-const reja6 = new Reja1(position = game.at(16,12))
-const reja7 = new Reja1(imagen = "reja3.png",position = game.at(18,12))
-const reja8 = new Reja1(imagen = "reja1.png",position = game.at(22,12))
-const reja9 = new Reja1(position = game.at(24,12))
-const reja10 = new Reja1(position = game.at(26,12))
-const reja11 = new Reja1(position = game.at(28,12))
-const reja12 = new Reja1(imagen = "reja3.png", position = game.at(30,12))
+const reja1 = new Reja(imagen = "reja1.png")
+const reja2 = new Reja(position = game.at(8,12))
+const reja3 = new Reja(position = game.at(10,12))
+const reja4 = new Reja(position = game.at(12,12))
+const reja5 = new Reja(position = game.at(14,12))
+const reja6 = new Reja(position = game.at(16,12))
+const reja7 = new Reja(imagen = "reja3.png",position = game.at(18,12))
+const reja8 = new Reja(imagen = "reja1.png",position = game.at(22,12))
+const reja9 = new Reja(position = game.at(24,12))
+const reja10 = new Reja(position = game.at(26,12))
+const reja11 = new Reja(position = game.at(28,12))
+const reja12 = new Reja(imagen = "reja3.png", position = game.at(30,12))
 
-const reja13 = new Reja1(imagen = "reja1.png",position = game.at(2,4))
-const reja14 = new Reja1(position = game.at(4,4))
-const reja15 = new Reja1(position = game.at(6,4))
-const reja16 = new Reja1(position = game.at(8,4))
-const reja17 = new Reja1(position = game.at(10,4))
-const reja18 = new Reja1(position = game.at(12,4))
-const reja19 = new Reja1(imagen = "reja3.png",position = game.at(14,4))
+const reja13 = new Reja(imagen = "reja1.png",position = game.at(2,4))
+const reja14 = new Reja(position = game.at(4,4))
+const reja15 = new Reja(position = game.at(6,4))
+const reja16 = new Reja(position = game.at(8,4))
+const reja17 = new Reja(position = game.at(10,4))
+const reja18 = new Reja(position = game.at(12,4))
+const reja19 = new Reja(imagen = "reja3.png",position = game.at(14,4))
 
 const pincho7 = new Pinchos(position = game.at(10,6))
 const pincho8 = new Pinchos(position = game.at(10,8))

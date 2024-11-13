@@ -40,7 +40,6 @@ object isaac{
       vida = vida -n
 
       if(self.vida() == 0){
-          game.say(self, "me mori xp")
           nivel.muerte()
       }
       else{

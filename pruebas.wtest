@@ -13,8 +13,13 @@ describe "tests para isaac" {
     bicho1.interactuar()
     assert.equals(90, isaac.vida())
   }
-  test "isaac al pasar por la puerta pasa de nivel"{
+  test "isaac al pasar por la puerta pasa de nivel (con llave)"{
+    isaac.tieneLlave(true)
     isaac.avanzarNivel()
     assert.equals(nivel2, nivel.escenarioActual())
+  } 
+   test "isaac no pasa por la puerta sin la llave"{
+    isaac.avanzarNivel()
+    assert.equals(nivel1, nivel.escenarioActual())
   } 
 }
