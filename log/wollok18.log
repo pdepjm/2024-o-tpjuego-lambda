@@ -1545,3 +1545,30 @@
 {"failures":[],"level":"info","message":"🧪 Test runner executed on c:\\Users\\Juanchi\\2024-o-tpjuego-lambda","result":{"failed":0,"ok":7},"timeElapsed":732,"timestamp":"2024-11-13T21:23:45.551Z"}
 {"failures":[],"level":"info","message":"🧪 Test runner executed on c:\\Users\\Juanchi\\2024-o-tpjuego-lambda","result":{"failed":0,"ok":7},"timeElapsed":641,"timestamp":"2024-11-13T21:24:13.691Z"}
 {"exitCode":0,"level":"info","message":"👾 Game executed main.isaacGame on c:\\Users\\Juanchi\\2024-o-tpjuego-lambda","timeElapsed":8567,"timestamp":"2024-11-13T21:40:25.824Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":156,"timestamp":"2024-11-13T21:43:47.282Z"}
+{"level":"info","message":"onRequest - WORKSPACE_URI:file:///c%3A/Users/Juanchi/2024-o-tpjuego-lambda","timestamp":"2024-11-13T21:43:47.296Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":196,"timestamp":"2024-11-13T21:43:47.495Z"}
+{"level":"info","message":"⌛ Validating nivel.wlk","timeElapsed":173,"timestamp":"2024-11-13T21:43:47.988Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":129,"timestamp":"2024-11-13T21:43:48.119Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":148,"timestamp":"2024-11-13T21:43:48.449Z"}
+{"level":"info","message":"⌛ Validating nivel.wlk","timeElapsed":124,"timestamp":"2024-11-13T21:43:48.573Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":108,"timestamp":"2024-11-13T21:43:48.760Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":120,"timestamp":"2024-11-13T21:43:48.885Z"}
+{"level":"info","message":"⌛ Validating visuales.wlk","timeElapsed":135,"timestamp":"2024-11-13T21:43:49.313Z"}
+{"level":"info","message":"⌛ Validating pruebas.wtest","timeElapsed":138,"timestamp":"2024-11-13T21:43:49.453Z"}
+{"level":"info","message":"⌛ Validating obstaculos.wlk","timeElapsed":177,"timestamp":"2024-11-13T21:43:49.631Z"}
+{"level":"info","message":"⌛ Validating main.wpgm","timeElapsed":142,"timestamp":"2024-11-13T21:43:49.775Z"}
+{"level":"info","message":"⌛ Validating isaac.wlk","timeElapsed":127,"timestamp":"2024-11-13T21:43:49.903Z"}
+{"level":"info","message":"⌛ Validating bicho.wlk","timeElapsed":130,"timestamp":"2024-11-13T21:43:50.032Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":114,"timestamp":"2024-11-13T21:48:12.729Z"}
+{"level":"info","message":"⌛ Validating main.wpgm","timeElapsed":216,"timestamp":"2024-11-13T21:48:12.978Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":231,"timestamp":"2024-11-13T21:51:28.786Z"}
+{"level":"info","message":"⌛ Validating obstaculos.wlk","timeElapsed":239,"timestamp":"2024-11-13T21:51:29.076Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":157,"timestamp":"2024-11-13T21:51:32.628Z"}
+{"level":"info","message":"⌛ Validating isaac.wlk","timeElapsed":211,"timestamp":"2024-11-13T21:51:32.847Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":141,"timestamp":"2024-11-13T21:51:36.855Z"}
+{"level":"info","message":"⌛ Validating isaac.wlk","timeElapsed":204,"timestamp":"2024-11-13T21:51:37.062Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":159,"timestamp":"2024-11-13T21:51:37.844Z"}
+{"level":"info","message":"⌛ Validating isaac.wlk","timeElapsed":209,"timestamp":"2024-11-13T21:51:38.054Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":137,"timestamp":"2024-11-13T21:51:38.233Z"}
+{"level":"info","message":"⌛ Validating isaac.wlk","timeElapsed":211,"timestamp":"2024-11-13T21:51:38.445Z"}

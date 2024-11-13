@@ -19,10 +19,6 @@ object isaac{
     const minimoX = 1
     const minimoY = 1
 
-    console.println(position.x())
-    console.println(position.y())
-    console.println(nuevaPosicion)
-
     // Solo actualiza la posición si está dentro de los límites
     if (nuevaPosicion.x() >= minimoX && nuevaPosicion.x() <= limiteX &&
         nuevaPosicion.y() >= minimoY && nuevaPosicion.y() <= limiteY) {
@@ -33,7 +29,7 @@ object isaac{
   method avanzarNivel(escenario){
       if (tieneLlave)
         nivel.cambiarEscenario(escenario)
-      else game.say(self, "me falta la llave")
+      else game.say(self, "Necesito la llave")
     }
   
   method danio(n) { 
