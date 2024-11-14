@@ -1,16 +1,16 @@
 import wollok.game.*
+import isaac.*
+import nivel.*
+import obstaculos.*
 
-import pepita.*
 
-program PepitaGame {
-	game.title("Pepita")
-	game.height(10)
-	game.width(10)
-	game.cellSize(100)
+program  isaacGame {
+	
+    const musica = game.sound("fondoMusica.mp3")
+	musica.shouldLoop(true)
+    game.schedule(500, { musica.play()} )
 
-	game.addVisual(pepita)
-
-	keyboard.w().onPressDo({ pepita.fly(1) })
-
+	nivel.inicio()
 	game.start()
 }
+

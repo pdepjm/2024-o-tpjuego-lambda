@@ -1,9 +1,44 @@
-import pepita.*
+import wollok.game.*
+import isaac.*
+import bicho.*
+import nivel.*
+import obstaculos.*
 
-describe "group of tests for pepita" {
-
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+describe "tests para isaac" {
+  test "isaac al tocar un pinche se le restan 5 pts de vida" {
+    pincho1.interactuar()
+    assert.equals(95, isaac.vida())
+  }
+  test "isaac al tocar un bicho se le restan 10 pts de vida" {
+    bicho1.interactuar()
+    assert.equals(90, isaac.vida())
   }
 
+  test "isaac al agarrar una pocion se cura 40 de vida"{
+    isaac.vida(50)
+    cura.interactuar()
+    assert.equals(90,isaac.vida())
+  }
+
+  test "el fantasma toca a isaac y lo despoja de sus armaduras"{
+    fantasma1.interactuar()
+    assert.equals(85, isaac.vida())
+    assert.equals("sinArmadura.png", isaac.image())
+  }
+
+  test "isaac al abrir el cofre se cura 20 de vida y se pone armadura"{
+    isaac.vida(80)
+    cofre.interactuar()
+    assert.equals(100, isaac.vida())
+    assert.equals("isaacConArmadura.png", isaac.image())
+  }
+  test "isaac al pasar por la puerta pasa de nivel (con llave)"{
+    isaac.tieneLlave(true)
+    isaac.avanzarNivel(nivel2)
+    assert.equals(nivel2, nivel.escenarioActual())
+  } 
+   test "isaac no pasa por la puerta sin la llave"{
+    isaac.avanzarNivel(nivel2)
+    assert.equals(nivel1, nivel.escenarioActual())
+  } 
 }
