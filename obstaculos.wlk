@@ -60,10 +60,6 @@ object cura{
     game.say(isaac, "Ahora tengo " + isaac.vida() + " de vida")
     game.removeVisual(self)
   }
-
-  method cambiarPosicion(nuevaPosicion){
-    self.position(nuevaPosicion)
-  }
 }
 
 object cofre{

@@ -58,3 +58,5 @@ Otros elementos importantes del juego son los obstáculos, objetos (clases) inm�
 ![Juego](assets/puerta1.png)
 
 Cada nivel es un escenario el cual está representado en una clase Escenario. En este juego disponemos de 3 niveles para completar. Esta contiene la posición de las llaves en cada nivel, el método para agregar a isaac al mapa y un metodo visuales() abstracto. Cada escenario que hereda estos comportamientos utiliza visuales para agregar sus propias imagenes, ya que cada uno es diferente al otro.
+
+![Diagrama](assets/diagramaFinal.png)

@@ -71,7 +71,7 @@ object nivel{
 }
 
 class Escenario{
-    const property posicionLlave
+    const property posicionLlave   
     method aniadirIsaac(){
         game.addVisual(isaac)
     }
