@@ -97,6 +97,6 @@ const bicho4 = new Enemigo(subiendo = false, limiteDerecho = 28, limiteIzquierdo
 const bicho5 = new Enemigo(horizontal = false, limiteSuperior = 18, limiteInferior = 12, position = game.at(12,16))
 const mago1 = new Mago(subiendo = false, limiteDerecho = 24 , limiteIzquierdo = 10, position = game.at(10,10))
 const mago2 = new Mago(subiendo = false, limiteDerecho = 22 , limiteIzquierdo = 12, position = game.at(12,6))
-const mago3 = new Mago(subiendo = false, limiteDerecho = 22, limiteIzquierdo = 14, position = game.at(10,10))
+const mago3 = new Mago(subiendo = false, limiteDerecho = 22, limiteIzquierdo = 14, position = game.at(14,10))
 const fantasma1 = new Fantasma(horizontal = false, limiteSuperior = 15 , limiteInferior = 1, position = game.at(24,3))
 const fantasma2 = new Fantasma(horizontal = false, limiteSuperior = 9 , limiteInferior = 1, position = game.at(12,3))

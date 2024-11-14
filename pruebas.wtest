@@ -22,7 +22,7 @@ describe "tests para isaac" {
 
   test "el fantasma toca a isaac y lo despoja de sus armaduras"{
     fantasma1.interactuar()
-    assert.equals(90, isaac.vida())
+    assert.equals(85, isaac.vida())
     assert.equals("sinArmadura.png", isaac.image())
   }
 

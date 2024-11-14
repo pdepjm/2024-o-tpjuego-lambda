@@ -27,7 +27,7 @@ object isaac{
   }
 
   method avanzarNivel(escenario){
-      if (tieneLlave)
+      if (tieneLlave && nivel.escenarioActual() != escenario)
         nivel.cambiarEscenario(escenario)
       else game.say(self, "Necesito la llave")
     }

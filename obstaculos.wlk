@@ -68,12 +68,12 @@ object cura{
 
 object cofre{
   var property position = game.at(3,16)
-  var abierto = false
+  var property abierto = false
   var property image = "cofre.png"
 
   method interactuar(){
     self.image("cofreAbierto.png")
-    if(abierto == false){
+    if(!abierto){
       isaac.vida(isaac.vida() + 20)
       game.say(isaac, "Ahora tengo " + isaac.vida() + " de vida")
       isaac.image("isaacConArmadura.png")

@@ -57,11 +57,16 @@ object nivel{
     method muerte(){
         self.clearGame()
         game.addVisual(gameOver)
+        isaac.vida(100)
+        isaac.image("peque.png")
     }
 
     method finalizar(){
         self.clearGame()	
         game.addVisual(finDelJuego)
+        isaac.vida(100)
+        isaac.image("peque.png")
+        cofre.abierto(false)
     }
 }
 
